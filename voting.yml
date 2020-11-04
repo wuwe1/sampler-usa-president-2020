@@ -1,0 +1,11 @@
+# variables:
+#   wins: curl -s https://www.huffpost.com/elections/president.json | jq '.summaries.president.wins'
+barcharts:
+  - title: USA President 2020
+    rate-ms: 5000        # sampling rate, default = 1000
+    scale: 0            # number of digits after sample decimal point, default = 1
+    items:
+      - label: Biden
+        sample: curl -s https://www.huffpost.com/elections/president.json | jq '.summaries.president.wins.dem'
+      - label: Trump
+        sample: curl -s https://www.huffpost.com/elections/president.json | jq '.summaries.president.wins.gop'
