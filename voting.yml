@@ -1,5 +1,3 @@
-# variables:
-#   wins: curl -s https://www.huffpost.com/elections/president.json | jq '.summaries.president.wins'
 barcharts:
   - title: USA President 2020
     rate-ms: 5000        # sampling rate, default = 1000
